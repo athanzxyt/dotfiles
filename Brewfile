@@ -1,9 +1,9 @@
 # Brewfile
 
-tap "homebrew/cask"
-
 brew "gh"
+brew "mole"
 
 cask "kitty"
-cask "mole"
 cask "spotify"
+cask "slack"
+cask "nikitabobko/tap/aerospace"
