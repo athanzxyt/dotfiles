@@ -65,6 +65,7 @@ No need to run these scripts yourself.
 - Homebrew
 - Kitty
 - mole
+- Neovim
 - Node
 - nvm
 - Oh My Zsh
