@@ -17,6 +17,3 @@ vim.opt.softtabstop = 4
 vim.cmd([[ highlight CursorLine guibg=#2a2a2a ]])
 vim.cmd([[ highlight CursorColumn guibg=#1f1f1f ]])
 vim.cmd([[ highlight CursorLineNr gui=bold guifg=#ffaa00 ]])
-
--- Termgui
-vim.opt.termguicolors = true

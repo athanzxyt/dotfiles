@@ -19,10 +19,8 @@ map('v', 'H', '^', opts)
 
 map("i", "kj", "<Esc>", opts)
 
-local telescope_available, builtin = pcall(require, 'telescope.builtin')
-if telescope_available then
-    map('n', '<leader>ff', builtin.find_files, with_desc('Telescope find files'))
-    map('n', '<leader>fg', builtin.live_grep, with_desc('Telescope live grep'))
-    map('n', '<leader>fb', builtin.buffers, with_desc('Telescope buffers'))
-    map('n', '<leader>fh', builtin.help_tags, with_desc('Telescope help tags'))
+-- Nvim-tree file explorer
+local nvim_tree_available = pcall(require, 'nvim-tree')
+if nvim_tree_available then
+    map('n', '<leader>e', '<cmd>NvimTreeFindFileToggle<cr>', with_desc('Toggle file tree'))
 end
