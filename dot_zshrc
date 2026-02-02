@@ -1,6 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/athanzhang/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # Homebrew (ensure brew + installed tools are on PATH)
 if [ -x /opt/homebrew/bin/brew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -129,3 +136,6 @@ tk() {
     local name="${1:-$(tmux display-message -p '#S')}"
     tmux kill-session -t "$name"
 }
+
+export EDITOR="nvim"
+export VISUAL="nvim"
