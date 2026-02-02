@@ -117,3 +117,15 @@ if command -v brew >/dev/null 2>&1; then
   [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
   [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
 fi
+
+# tmux: create or attach to a session named after the current directory
+t() {
+    local name="${1:-$(basename "$PWD")}"
+    tmux new -A -s "$name"
+}
+
+# tmux: kill a session (current by default)
+tk() {
+    local name="${1:-$(tmux display-message -p '#S')}"
+    tmux kill-session -t "$name"
+}
